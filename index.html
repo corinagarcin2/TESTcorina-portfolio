@@ -1,241 +1,323 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Corina Garcin — Systems Engineering student at Texas A&M International University. Portfolio of projects and experience.">
-  <title>Corina Garcin — Systems Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Corina Garcin — Systems Engineering student at Texas A&M International University.">
+  <title>Corina Garcin | Systems Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1 class="site-title">Corina Garcin</h1>
-        <p class="sub">Systems Engineering • Texas A&amp;M International University</p>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand-block">
+          <span class="brand-name">Corina Garcin</span>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#about">ABOUT</a>
+          <a href="#experience">EXPERIENCE</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#skills">SKILLS</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
       </div>
-      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#how">How I Got Here</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero container reveal" id="home" aria-labelledby="home-heading">
-      <div class="hero-grid">
-        <div class="hero-text">
-          <h2 id="home-heading">Hi — I'm Corina Garcin</h2>
-          <p class="lead">Systems Engineering @ TAMIU | Curious about how engineering, technology, and people come together to solve problems.</p>
-          <p class="cta-row"><a class="cta" href="#projects">See my work</a> <a class="cta ghost" href="#contact">Contact</a></p>
-        </div>
-        <div class="hero-card">
-          <div class="stat">
-            <div class="num">B.S.</div>
-            <div class="label">Systems Engineering</div>
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero-layout reveal">
+          <div class="hero-copy">
+            <p class="eyebrow">SYSTEMS ENGINEERING @ TAMIU</p>
+            <h1>CORINA<br>GARCIN</h1>
+            <p class="intro">Engineering × Technology × Systems</p>
+            <div class="cta-row">
+              <a class="button primary" href="#projects">VIEW MY WORK →</a>
+              <a class="button secondary" href="#contact">LET'S CONNECT →</a>
+            </div>
           </div>
-          <div class="stat">
-            <div class="num">May 2027</div>
-            <div class="label">Expected Graduation</div>
-          </div>
-          <div class="stat small">
-            <div class="label">Laredo, Texas</div>
+
+          <div class="hero-visual">
+            <div class="photo-panel">
+              <!-- Place my profile photo here: images/profile.jpg -->
+              <!-- Recommended: use a square photo around 600x600 for the best crop. -->
+              <img src="images/profile.jpg" alt="Portrait of Corina Garcin" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="container reveal" id="about">
-      <h3>About</h3>
-      <p>I’m a first-generation college student from Laredo, Texas pursuing a Bachelor of Science in Systems Engineering at Texas A&amp;M International University. I am interested in engineering, technology, systems, and understanding how different technical areas work together. My experience includes power distribution engineering, IT support, engineering projects, and student leadership.</p>
-    </section>
-
-    <section class="container reveal" id="experience">
-      <h3>Experience</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="role">Leidos</div>
-            <div class="title">Power Delivery Engineering Intern, Distribution</div>
-            <div class="muted">Houston, Texas — May 2026 – July 2026</div>
-          </div>
-          <div class="timeline-right">
-            <p>I worked on power distribution engineering projects. Tasks included reconductoring, pole replacement designs, framing updates, transformer and switch callouts, design revisions, and field data collection. I performed pre-fielding work such as finding pole coordinates, working with KMZ files, matching information with SKYwire, and using Google Earth for field preparation.</p>
-            <p><strong>Tools:</strong> JIRA · SKYwire · GIS / GViewer · DDS · SAP · Google Earth · Excel</p>
-            <p><strong>Field data examples:</strong> Pole ID · Pole height &amp; class · Equipment info · Conductor info · Transformer info · Switch &amp; fuse info</p>
+      <section class="section about-section" id="about">
+        <div class="container reveal editorial-block">
+          <div class="section-label">ABOUT</div>
+          <div class="about-grid">
+            <p class="about-kicker">Laredo, Texas • Systems Engineering student</p>
+            <p>I'm a first-generation college student pursuing a B.S. in Systems Engineering at Texas A&amp;M International University. My experience spans power distribution engineering, IT support, technical projects, and student leadership.</p>
           </div>
         </div>
+      </section>
 
-        <div class="timeline-item">
-          <div class="timeline-left">
-            <div class="role">Texas A&amp;M International University</div>
-            <div class="title">IT Help Desk Technician</div>
-            <div class="muted">Laredo, Texas</div>
+      <section class="section" id="experience">
+        <div class="container reveal">
+          <div class="section-label">EXPERIENCE</div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-meta">
+                <span class="company">LEIDOS</span>
+                <span class="role">Power Delivery Engineering Intern — Distribution</span>
+                <span class="location">Houston, TX | May–July 2026</span>
+              </div>
+              <div class="timeline-body">
+                <p>Worked on power distribution engineering projects including reconductoring, pole replacement, framing updates, design revisions, and field data collection.</p>
+                <div class="tag-list">
+                  <span>JIRA</span>
+                  <span>SKYWIRE</span>
+                  <span>GIS</span>
+                  <span>DDS</span>
+                  <span>SAP</span>
+                  <span>Google Earth</span>
+                  <span>Excel</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-meta">
+                <span class="company">TAMIU</span>
+                <span class="role">IT Help Desk Technician</span>
+                <span class="location">Laredo, TX</span>
+              </div>
+              <div class="timeline-body">
+                <p>Exposure to technical troubleshooting, IT support, and helping users solve technology problems in a support environment.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-meta">
+                <span class="company">TAMIU</span>
+                <span class="role">L2 Tutor</span>
+                <span class="location">Laredo, TX</span>
+              </div>
+              <div class="timeline-body">
+                <p>Provided peer tutoring and academic support to students by breaking down technical concepts, answering questions, and helping students develop stronger problem-solving strategies. Strengthened my communication, leadership, and ability to explain complex information in an approachable way.</p>
+              </div>
+            </article>
           </div>
-          <div class="timeline-right">
-            <p>This experience provided exposure to IT troubleshooting, technical support, and solving technology problems for users.</p>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container reveal">
+          <div class="section-label">PROJECTS</div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/project-unit-converter.jpg" alt="Engineering Unit Converter" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+              </div>
+              <div class="project-content">
+                <span class="project-number">PROJECT 01</span>
+                <h3>Engineering Unit Converter</h3>
+                <p>Python project practicing variables, user input, conditional logic, engineering calculations, and formatted output.</p>
+                <ul class="tag-list small-tags">
+                  <li>Python</li>
+                  <li>User Input</li>
+                  <li>Calculations</li>
+                </ul>
+                <a class="mini-button" href="#">VIEW PROJECT →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/project-voltmeter.jpg" alt="Wokwi 3.3V Voltmeter" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+              </div>
+              <div class="project-content">
+                <span class="project-number">PROJECT 02</span>
+                <h3>3.3V Voltmeter</h3>
+                <p>Microcontroller project using a potentiometer voltage divider and OLED display to measure and display voltage.</p>
+                <ul class="tag-list small-tags">
+                  <li>Microcontroller</li>
+                  <li>OLED</li>
+                  <li>Voltage</li>
+                </ul>
+                <a class="mini-button" href="#">VIEW PROJECT →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/project-operations-research.jpg" alt="Operations Research / Monte Carlo project" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+              </div>
+              <div class="project-content">
+                <span class="project-number">PROJECT 03</span>
+                <h3>Operations Research / Monte Carlo</h3>
+                <p>Research and modeling work involving operations research concepts and Monte Carlo simulation.</p>
+                <ul class="tag-list small-tags">
+                  <li>Modeling</li>
+                  <li>Simulation</li>
+                  <li>Research</li>
+                </ul>
+                <a class="mini-button" href="#">VIEW PROJECT →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/project-embedded.jpg" alt="Microprocessor systems project" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+              </div>
+              <div class="project-content">
+                <span class="project-number">PROJECT 04</span>
+                <h3>Microprocessor Systems</h3>
+                <p>Academic work involving microprocessors and embedded systems.</p>
+                <ul class="tag-list small-tags">
+                  <li>Embedded</li>
+                  <li>Systems</li>
+                  <li>Programming</li>
+                </ul>
+                <a class="mini-button" href="#">VIEW PROJECT →</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-media">
+                <img src="images/project-robotics.jpg" alt="Robotics and automation project" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+              </div>
+              <div class="project-content">
+                <span class="project-number">PROJECT 05</span>
+                <h3>Robotics &amp; Automation</h3>
+                <p>Academic work involving robotics and automation systems.</p>
+                <ul class="tag-list small-tags">
+                  <li>Robotics</li>
+                  <li>Automation</li>
+                  <li>Academic</li>
+                </ul>
+                <a class="mini-button" href="#">VIEW PROJECT →</a>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="container reveal" id="how">
-      <h3>How I Got Here</h3>
-      <div class="journey-visual">
-        <div class="node">Laredo, Texas</div>
-        <div class="connector">↓</div>
-        <div class="node">TAMIU — Systems Engineering</div>
-        <div class="connector">↓</div>
-        <div class="node">IT Help Desk</div>
-        <div class="connector">↓</div>
-        <div class="node">Student Leadership</div>
-        <div class="connector">↓</div>
-        <div class="node">Leidos — Power Delivery Engineering</div>
-        <div class="connector">↓</div>
-        <div class="node">Building my engineering + technology skill set</div>
-      </div>
-    </section>
+      <section class="section" id="skills">
+        <div class="container reveal">
+          <div class="section-label">SKILLS</div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3>ENGINEERING</h3>
+              <ul>
+                <li>Systems Engineering</li>
+                <li>Power Distribution</li>
+                <li>Engineering Design</li>
+                <li>Field Data Collection</li>
+              </ul>
+            </div>
 
-    <section class="container reveal" id="projects">
-      <h3>Projects</h3>
-      <div class="projects-grid">
-        <article class="project-card">
-          <h4>Engineering Unit Converter</h4>
-          <p>A Python project that performs common engineering unit conversions: miles ↔ kilometers, inches ↔ feet, Fahrenheit ↔ Celsius, and watts ↔ kilowatts.</p>
-          <p class="muted"><strong>Skills:</strong> Python · variables · user input · conditionals · calculations · formatted output</p>
-          <p><a class="link" href="#">GitHub (placeholder)</a></p>
-        </article>
+            <div class="skill-card">
+              <h3>TECHNOLOGY</h3>
+              <ul>
+                <li>Python</li>
+                <li>GitHub</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SQL <span class="learning">— Learning</span></li>
+              </ul>
+            </div>
 
-        <article class="project-card">
-          <h4>Wokwi 3.3V Voltmeter</h4>
-          <p>A microcontroller project using a potentiometer voltage divider and OLED display to measure and display voltage.</p>
-          <p><a class="link" href="#">Wokwi / GitHub (placeholder)</a></p>
-        </article>
+            <div class="skill-card">
+              <h3>TOOLS</h3>
+              <ul>
+                <li>JIRA</li>
+                <li>SAP</li>
+                <li>GIS / GViewer</li>
+                <li>SKYWIRE</li>
+                <li>DDS</li>
+                <li>Google Earth</li>
+                <li>Excel</li>
+              </ul>
+            </div>
 
-        <article class="project-card">
-          <h4>Operations Research / Monte Carlo Simulation Project</h4>
-          <p>Research work involving modeling and Monte Carlo simulation concepts.</p>
-          <p><a class="link" href="#">Project link (placeholder)</a></p>
-        </article>
-
-        <article class="project-card">
-          <h4>Microprocessor Systems / Embedded Project</h4>
-          <p>Work related to microprocessor systems and embedded programming.</p>
-          <p><a class="link" href="#">Project link (placeholder)</a></p>
-        </article>
-
-        <article class="project-card">
-          <h4>Robotics and Automation</h4>
-          <p>Academic work related to robotics and automation.</p>
-          <p><a class="link" href="#">Project link (placeholder)</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section class="container reveal" id="skills">
-      <h3>Skills</h3>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h4>Engineering</h4>
-          <ul>
-            <li>Systems Engineering</li>
-            <li>Power Distribution</li>
-            <li>Engineering Design</li>
-            <li>Field Data Collection</li>
-            <li>Engineering Analysis</li>
-          </ul>
+            <div class="skill-card">
+              <h3>IT</h3>
+              <ul>
+                <li>Technical Troubleshooting</li>
+                <li>IT Support</li>
+                <li>Help Desk</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="skill-group">
-          <h4>Software / Technical</h4>
-          <ul>
-            <li>Python</li>
-            <li>Excel</li>
-            <li>JIRA</li>
-            <li>SAP</li>
-            <li>Google Earth</li>
-            <li>SKYwire</li>
-            <li>GIS / GViewer</li>
-            <li>DDS</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h4>IT</h4>
-          <ul>
-            <li>Technical Troubleshooting</li>
-            <li>IT Support</li>
-            <li>Help Desk Support</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h4>Leadership</h4>
-          <ul>
-            <li>Student Leadership</li>
+      <section class="section" id="leadership">
+        <div class="container reveal editorial-block compact">
+          <div class="section-label">LEADERSHIP &amp; INVOLVEMENT</div>
+          <ul class="inline-list">
             <li>Women in STEM</li>
-            <li>SWE involvement</li>
-            <li>First-generation student advocacy</li>
+            <li>SWE / Society of Women Engineers</li>
+            <li>Student leadership</li>
+            <li>First-generation student perspective</li>
+            <li>Engineering student involvement</li>
           </ul>
         </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container reveal">
+          <div class="section-label">HOW I GOT HERE</div>
+          <div class="journey-visual">
+            <div class="node">Laredo, Texas</div>
+            <div class="connector">↓</div>
+            <div class="node">TAMIU — Systems Engineering</div>
+            <div class="connector">↓</div>
+            <div class="node">IT Help Desk</div>
+            <div class="connector">↓</div>
+            <div class="node">Student Leadership</div>
+            <div class="connector">↓</div>
+            <div class="node">Leidos — Power Delivery Engineering</div>
+            <div class="connector">↓</div>
+            <div class="node">Building my engineering + technology skill set</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="container reveal editorial-block">
+          <div class="section-label">EDUCATION</div>
+          <p class="edu-copy">Texas A&amp;M International University — Bachelor of Science in Systems Engineering</p>
+          <p class="edu-copy"><strong>Expected Graduation:</strong> May 2027</p>
+          <div class="timeline-simple">Education → Leadership → IT Experience → Leidos Engineering Internship → Current Projects</div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container reveal">
+          <div class="section-label">CONTACT</div>
+          <p class="contact-tagline">Let's build something.</p>
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:your.email@example.com">EMAIL</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/corinagarcin/" target="_blank" rel="noreferrer">LINKEDIN</a>
+            <a class="button secondary" href="https://github.com/your-github" target="_blank" rel="noreferrer">GITHUB</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Corina Garcin</strong>
+          <div>Systems Engineering @ TAMIU</div>
+        </div>
+        <div class="footer-note">© <span id="year"></span> • Built with curiosity, code, and a lot of problem-solving.</div>
       </div>
-    </section>
-
-    <section class="container reveal" id="next">
-      <h3>What I'm Building Next</h3>
-      <p>Continuing to develop skills in:</p>
-      <ul>
-        <li>Python</li>
-        <li>GitHub</li>
-        <li>Software development</li>
-        <li>SQL</li>
-        <li>Engineering analysis</li>
-        <li>Systems Engineering</li>
-      </ul>
-    </section>
-
-    <section class="container reveal" id="leadership">
-      <h3>Leadership & Involvement</h3>
-      <p>Active in student leadership and STEM organizations, with a focus on supporting women in STEM and representing a first-generation student perspective.</p>
-      <ul>
-        <li>Women in STEM leadership</li>
-        <li>SWE / Society of Women Engineers involvement and leadership</li>
-        <li>First-generation student perspective</li>
-        <li>Engineering student involvement</li>
-      </ul>
-    </section>
-
-    <section class="container reveal" id="education">
-      <h3>Education</h3>
-      <p>Texas A&amp;M International University — Bachelor of Science in Systems Engineering</p>
-      <p><strong>Expected Graduation:</strong> May 2027</p>
-      <div class="timeline-simple">
-        <div>Education → Leadership → IT Experience → Leidos Engineering Internship → Current Projects</div>
-      </div>
-    </section>
-
-    <section class="container reveal" id="contact">
-      <h3>Contact</h3>
-      <p>Please replace placeholders with your professional contact information:</p>
-      <ul>
-        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/your-github">https://github.com/your-github</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/corinagarcin/?utm_source=chatgpt.com">https://www.linkedin.com/in/corinagarcin/</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Corina Garcin · Systems Engineering @ Texas A&M International University · Laredo, Texas</div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>

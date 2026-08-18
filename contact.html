@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Corina Garcin - Systems Engineering student, engineer, and leader.">
+  <title>Contact — Corina Garcin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <main>
+      <!-- Back Link -->
+      <div class="container" style="padding-top: 2rem; padding-bottom: 0.5rem;">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+      </div>
+
+      <!-- Contact Page Header -->
+      <section class="section contact-page-section">
+        <div class="container reveal">
+          <div class="contact-page-header">
+            <h1 class="contact-page-title">SEND A MESSAGE</h1>
+            <p class="contact-page-subtitle">Interested in my work, projects, or potential opportunities? I'd love to hear from you.</p>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-page-form-wrapper">
+            <form class="contact-form" id="contactPageForm" name="contact-form" method="POST" action="https://formspree.io/f/xjkvnjpq">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="required">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required>
+                  <span class="form-error" id="firstNameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span class="required">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required>
+                  <span class="form-error" id="lastNameError"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="college">College / Company</label>
+                  <input type="text" id="college" name="college">
+                </div>
+                <div class="form-group">
+                  <label for="jobTitle">Job Title / Position</label>
+                  <input type="text" id="jobTitle" name="jobTitle">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone">
+                  <span class="form-error" id="phoneError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" required>
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="form-submit-btn">SEND MESSAGE →</button>
+              <div class="form-success" id="formSuccess">
+                <div class="success-icon">✓</div>
+                <h3 class="success-title">MESSAGE SENT</h3>
+                <p class="success-message">Thanks for reaching out. I'll get back to you soon.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Corina Garcin</strong>
+          <div>Systems Engineering @ TAMIU</div>
+        </div>
+        <div class="footer-note">© <span id="year"></span> • Built with curiosity, code, and a lot of problem-solving.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Contact page specific form handling
+    document.addEventListener('DOMContentLoaded', function () {
+      const contactForm = document.getElementById('contactPageForm');
+      const formSuccess = document.getElementById('formSuccess');
+
+      if (contactForm) {
+        // Form validation
+        function validateEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        function validatePhone(phone) {
+          if (!phone) return true; // Phone is optional
+          const phoneRegex = /^[\d\s()\-+.]+$/;
+          return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 10;
+        }
+
+        function showError(fieldId, message) {
+          const errorEl = document.getElementById(fieldId + 'Error');
+          if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.classList.add('show');
+          }
+        }
+
+        function clearAllErrors() {
+          const errorEls = document.querySelectorAll('.form-error');
+          errorEls.forEach(function (el) {
+            el.classList.remove('show');
+            el.textContent = '';
+          });
+        }
+
+        // Form submission
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          clearAllErrors();
+
+          const firstName = document.getElementById('firstName').value.trim();
+          const lastName = document.getElementById('lastName').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const message = document.getElementById('message').value.trim();
+
+          let isValid = true;
+
+          // Validate first name
+          if (!firstName) {
+            showError('firstName', 'First name is required');
+            isValid = false;
+          }
+
+          // Validate last name
+          if (!lastName) {
+            showError('lastName', 'Last name is required');
+            isValid = false;
+          }
+
+          // Validate email
+          if (!email) {
+            showError('email', 'Email is required');
+            isValid = false;
+          } else if (!validateEmail(email)) {
+            showError('email', 'Please enter a valid email');
+            isValid = false;
+          }
+
+          // Validate phone if provided
+          if (phone && !validatePhone(phone)) {
+            showError('phone', 'Please enter a valid phone number');
+            isValid = false;
+          }
+
+          // Validate message
+          if (!message) {
+            showError('message', 'Message is required');
+            isValid = false;
+          }
+
+          if (isValid) {
+            // Submit form using Formspree
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('button[type=\"submit\"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'SENDING...';
+
+            fetch(contactForm.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            })
+              .then(function (response) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+                if (response.ok) {
+                  formSuccess.classList.add('show');
+                  contactForm.reset();
+                  contactForm.style.display = 'none';
+                } else {
+                  showError('message', 'There was an error sending your message. Please try again.');
+                }
+              })
+              .catch(function (error) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+                showError('message', 'There was an error sending your message. Please try again.');
+                console.error('Error:', error);
+              });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
